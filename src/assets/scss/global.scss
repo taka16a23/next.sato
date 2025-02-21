@@ -1,0 +1,92 @@
+@charset "utf-8";
+
+// Noto Sans JP
+@import url("https://fonts.googleapis.com/earlyaccess/notosansjp.css");
+
+// material design icons
+@import 'icons/material-design-iconic-font/css/materialdesignicons.min.css';
+
+// リセットCSS
+@import "destyle";
+
+// Import Bootstrap source files (Required file)
+@import 'vendors/bootstrap/bootstrap.scss';
+
+// 変数
+@import "variables/variables.scss";
+
+// コンポーネント
+@import "components/components.scss";
+
+// 基底
+@import "base";
+
+// ヘッダ
+@import "header";
+
+// フッタ
+@import "footer";
+
+// メニューバー
+.menu-area {
+  display: none;
+  background: -moz-linear-gradient(top, $color-brand-default 0%, $color-brand-default 49%, #1a512f 50%, $color-brand-default 100%);
+  background: -webkit-linear-gradient(top, $color-brand-default 0%, $color-brand-default 49%,#1a512f 50%, $color-brand-default 100%);
+  background: linear-gradient(to bottom, $color-brand-default 0%, $color-brand-default 49%,#1a512f 50%, $color-brand-default 100%);
+
+  .menu-list {
+	  display: flex;
+	  justify-content: space-around;
+	  margin: 0;
+    padding: 0;
+	  line-height: 1.6;
+    
+    .menu-item {
+      flex: 1;
+      
+      .menu-label {
+	      display: block;
+        text-decoration: none;
+        font-weight: bold;
+	      text-align: center;
+        letter-spacing: 4px;
+	      color: $color-foreground-contrast-default;
+	      padding: 14px 0;
+      }
+
+      &:hover {
+        background: -moz-linear-gradient(top, $color-brand-mute 0%, $color-brand-mute 49%, #28653f 50%, $color-brand-mute 100%);
+        background: -webkit-linear-gradient(top, $color-brand-mute 0%, $color-brand-mute 49%,#28653f 50%, $color-brand-mute 100%);
+        background: linear-gradient(to bottom, $color-brand-mute 0%, $color-brand-mute 49%,#28653f 50%, $color-brand-mute 100%);
+      }
+    }
+  }
+
+  .dropdown-item {
+	  color: $color-dropdown-foreground-default;
+    background: $color-dropdown-background-default;
+	  border: 1px solid #ccc;
+    letter-spacing: 4px;
+    text-decoration: none;
+	  border-top: none;
+    font-weight: bold;
+	  text-align: center;
+    .dropdown-label {
+      color: $color-dropdown-foreground-default;
+      text-decoration: none;
+	    padding: 14px 0;
+    }
+    &:hover .dropdown-label {
+      color: $color-dropdown-foreground-default-hover;
+    }
+  }
+}
+
+/* 1024px以上 */
+@media screen and (min-width:map-get($breakpoints, lg)) {
+
+  .menu-area {
+    display: block;
+  }
+}
+

@@ -1,0 +1,24 @@
+.dropdown {
+  position: relative;
+
+  .dropdown-container {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 999;
+
+    .dropdown-item {
+      display: none;
+	    padding: 0;
+      
+      .dropdown-label {
+        display: block;
+      }
+    }
+  }
+
+  &:hover .dropdown-item {
+      display: block;
+  }
+}

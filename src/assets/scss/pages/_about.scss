@@ -1,0 +1,53 @@
+// 変数
+@import "../variables/layouts";
+
+.rule-image {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  img {
+    width: 100%;
+  }
+}
+
+.confirm-modal {
+  .header {
+    padding: 1rem;
+    letter-spacing: 8px;
+    font-weight: bold;
+    font-size: 1.2rem;
+    background-color: #2C7046;
+    color: white;
+  }
+  .body-inner {
+    padding: 1rem;
+    .item {
+      .label {
+        font-weight: bold;
+        margin-bottom: 1rem;
+        color: #1A1A1A;
+      }
+      .content {
+        margin-top: 0.6rem;
+        color: #757575;
+      }
+    }
+    hr {
+      margin-top: 1rem;
+      margin-bottom: 1rem;
+      color: #dee2e6;
+    }
+  }
+}
+
+/* 1024px以上 */
+@media screen and (min-width:map-get($breakpoints, lg)) {
+  .rule-image {
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    img {
+      width: 100%;
+    }
+  }
+}

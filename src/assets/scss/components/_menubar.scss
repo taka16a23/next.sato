@@ -1,0 +1,26 @@
+/*３本バーブロック*/
+#menubar_hdr {
+	display: block;
+	position: fixed;
+  z-index: 100;
+	top: 10px;	/*上からの配置場所指定*/
+	right: 3%;	/*右からの配置場所指定*/
+	width: 50px;	/*幅*/
+	height: 50px;	/*高さ*/
+	cursor: pointer;
+	background: #1b8913 url(../images/ham.png) no-repeat center top/50px;/*背景色、ハンバーガメニュー画像の読み込み。最後のpxはwidthとheightと、#menubar_hdr.hamと揃えておいて下さい。*/
+	transition: 0.2s;
+}
+#menubar_hdr {
+  display: none;
+}
+
+/*マウスオン時*/
+#menubar_hdr:hover {
+	filter: brightness(1.1);
+}
+
+/*×印が出ている状態の設定。*/
+#menubar_hdr.ham {
+	background: #ff0000 url(../images/ham.png) no-repeat center bottom/50px;
+}

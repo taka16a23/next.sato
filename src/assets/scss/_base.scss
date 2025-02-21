@@ -1,0 +1,38 @@
+html,body {
+	margin: 0;
+  padding: 0;
+	overflow-x: hidden;
+	font-size: 16px;
+	font-family: $base-font-family;
+	-webkit-text-size-adjust: none;
+  background-color: $color-background-fallback;
+  // for pagetop button
+  scroll-behavior: smooth;
+}
+
+.wrapper {
+  max-width: 1400px;
+
+  margin: 0 auto;
+  color: $color-foreground-default;
+  background-color: $color-background-default;
+	line-height: 2;
+}
+
+/* 全般の設定 */
+a {
+	color: $color-foreground-default;
+
+  &:hover {
+    color: $color-brand-default;
+    text-decoration: underline;
+  }
+}
+
+.hide {
+  display: none;
+}
+
+.text-mute {
+  color: #757575;
+}

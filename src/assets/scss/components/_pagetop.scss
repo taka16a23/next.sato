@@ -1,0 +1,45 @@
+html {
+  scroll-behavior: smooth;
+}
+
+#pagetop a {
+	display: block;
+  text-decoration: none;
+  text-align: center;
+	position: fixed;
+	right: 20px;
+	bottom: 20px;
+	color: #fff;
+	font-size: 1.5rem;
+	background: rgba(0,0,0,0.3);
+	width: 60px;
+	line-height: 60px;
+  border-radius: 40px;
+  animation: scrollposition linear;
+  animation-timeline: scroll(root);
+  transition: bottom 1s ease;
+	z-index: 99;
+
+  &:hover {
+    color: #fff;
+	  background: rgba(0,0,0,0.5);
+  }
+}
+
+@keyframes scrollposition {
+  0% {
+    bottom: -120px;
+  }
+  18% {
+    bottom: -120px;
+  }
+  19% {
+    bottom: 0px;
+  }
+  20% {
+    bottom: 20px;
+  }
+  100% {
+    bottom: 20px;
+  }
+}

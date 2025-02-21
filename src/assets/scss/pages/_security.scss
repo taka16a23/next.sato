@@ -1,0 +1,211 @@
+.emergency-list {
+  display: block;
+  .emergency-item {
+    width: 100%;
+    
+    .emergencyInfoBox {
+      > a {
+        display: block;        
+        width: 100%;
+      }
+      img.title_pic {
+        margin-bottom: 16px;
+      }
+      
+      a:hover {
+        opacity: 0.8;
+      }
+      .emergencyInfoBoxHead {
+        height: 58px;
+        background-color: #fff;
+        display: flex;
+        padding: 12px;
+        font-size: 24px;
+        color: red;
+        font-weight: bold;
+        vertical-align: middle;
+        line-height: 32px;
+        border: solid 1px red;
+        .icon {
+          display: block;
+        }
+        .title {
+          margin-left: 12px;
+        }
+      }
+      .emergencyInfoBoxHead {
+        background-color: red;
+        display: flex;
+        color: #fff;
+      }
+      h2 {
+        margin-top: 4px;
+        margin-bottom: 0;
+        padding: 4px 4px 4px 16px;
+        border-bottom: 3px solid #7AA800;
+        background-color: #F2F6E5;
+        font-weight: normal;
+
+        button {
+          background-color: #333333;
+          border-color: #333333;
+          color: #FFF;
+          text-align: center;          
+          border-width: 2px;
+          border-style: outset;
+          border-color: buttonborder;
+          border-image: initial;
+          &:hover {
+            background-color: #7AA800;
+            border-color: #7AA800;
+            color: #FFF;
+          }        
+        }
+      }
+
+      .name {
+        display: inline-block;
+        width: 60%;
+        letter-spacing: 0.4px;
+        a {
+          color: -webkit-link;
+          text-decoration: underline;
+        }
+      }
+      .state {
+        display: inline-block;
+        width: 20%;
+      }
+      button {
+        width: 16%;
+      }
+      .noAnnouncement {
+        color: #989898;
+      }
+      .hasAnnounced {
+        color: #DE0A09;
+      }
+    }
+  }
+  .emergency-item + .emergency-item {
+    padding-left: 0;
+    padding-top: 16px;
+  }
+}
+
+// ライブカメラ
+.rivercam-container {
+  overflow-x: auto;
+}
+
+.weather-alert-container {
+
+  .weather-alert {
+    width: 100%;
+    overflow-x: auto;
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      border: 1px solid #999;
+      box-sizing: border-box;
+
+      .weather-special-warning {
+        background-color: black;
+        color: #FFF;
+      }
+      
+      th {
+        padding: 4px;
+        font-weight: normal;
+        font-size: 100%;
+        border: 1px solid #999;
+        text-align: center;
+        vertical-align: middle;
+        line-height: 1.2;
+
+        &.weather-warning {
+          background-color: #F00;
+          color: #FFF;
+        }
+        &.weather-advisories {
+          background-color: #FF0;
+        }
+      }
+      td {
+        padding: 4px;
+        text-align: center;
+        border: 1px solid #999;
+        vertical-align: middle;
+        line-height: 1.2rem;
+
+        &.weather-special-warning {
+          font-weight: bold;
+        }
+      }
+    }  
+
+    .weather-rain-heavy-rain {
+      margin-bottom: 8px;
+
+      th {
+        background-color: #E7E7E7;
+      }
+      td {
+        width: fit-content;
+      }
+    }
+
+    .weather-alert-content {
+      margin-bottom: 16px;
+      
+      tbody {
+        display: table-row-group;
+        vertical-align: middle;
+
+        th {
+          font-weight: bold;
+        }
+
+        td {
+          &.weather-warning {
+            background-color: #FCC;
+            font-weight: bold;
+          }
+
+          &.weather-advisories {
+            background-color: #FFC;
+            font-weight: bold;
+          }  
+        }
+      }
+    }
+
+    .weather-alert-remark {
+      width: fit-content;
+
+      tbody {
+        th {
+          width: 5rem;
+          font-weight: bold;
+          font-size: 0.9rem;
+        }
+        td {
+          width: fit-content;
+          padding: 10px;
+          text-align: left;
+          font-size: 0.8rem;
+        }
+      }
+    }  
+  }
+}
+
+// 避難地図
+.evacuationMapArea {
+  width: 100%;
+  iframe {
+    width: 100%;
+    height: 500px;
+  }
+}

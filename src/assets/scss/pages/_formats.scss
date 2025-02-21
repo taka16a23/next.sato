@@ -1,0 +1,201 @@
+.jichikai-formats,
+.jichitai-formats {
+  &> table {
+    &> thead {
+      display: none;
+      background-color: $color-table-header-background;
+      th {
+        padding: 12px;
+        border: 1px solid $color-table-border;
+      }
+      .format-description {
+        width: 50%;
+      }
+      .format-forms {
+        width: 30%;
+      }
+    }
+    &> tbody {
+      &> tr {
+        display: grid;
+        &> td {
+          padding: 12px;
+        }
+        .format-name {
+          grid-row-start: 1;
+          grid-row-end: 2;
+          grid-column-start: 1;
+          grid-column-end: 6;
+          background-color: $color-table-header-background;
+          border: 1px solid $color-table-border;
+          a {
+            color: -webkit-link;
+            color: -moz-hyperlinkText;
+            font-weight: bold;
+          }
+        }
+        .format-description {
+          grid-row-start: 2;
+          grid-row-end: 3;
+          grid-column-start: 1;
+          grid-column-end: 6;
+          border: none;
+        }
+        .format-download {
+          display: flex;
+          text-align: center;
+          align-content: center;
+          align-items: center;
+          vertical-align: middle;
+          justify-content: center;
+          grid-row-start: 3;
+          grid-row-end: 4;
+          grid-column-start: 2;
+          grid-column-end: 3;
+          border: none;
+          width: 100%;
+          a {
+            display: block;
+            width: 100%;
+          }
+        }
+        .format-form {
+          display: flex;
+          text-align: center;
+          align-content: center;
+          align-items: center;
+          vertical-align: middle;
+          justify-content: center;
+          grid-row-start: 3;
+          grid-row-end: 4;
+          grid-column-start: 4;
+          grid-column-end: 5;
+          width: 100%;
+          border: none;
+          a {
+            display: block;
+            width: 100%;
+          }
+        }
+        
+      }
+    }
+  }
+}
+
+.jichikai-formats {
+  &> table {
+    &> tbody {
+      &> tr {
+        padding-bottom: 12px;
+      }
+    }
+  }
+}
+
+/* 768px以上 */
+@media screen and (min-width:map-get($breakpoints, md)) {
+  .jichikai-formats {
+    &> table {
+      &> tbody {
+        &> tr {
+          display: grid;
+
+          .format-name {
+            grid-row-start: 1;
+            grid-row-end: 2;
+            grid-column-start: 1;
+            grid-column-end: 6;
+            background-color: $color-table-header-background;
+          }
+          .format-description {
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 1;
+            grid-column-end: 3;
+          }
+          .format-download {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 4;
+            grid-column-end: 5;
+            width: 7.5rem;
+          }
+          .format-form {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            grid-row-start: 2;
+            grid-row-end: 3;
+            grid-column-start: 5;
+            grid-column-end: 6;      
+            width: 7.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 1024px以上 */
+@media screen and (min-width:map-get($breakpoints, lg)) {
+  .jichikai-formats,
+  .jichitai-formats {
+    &> table {
+      &> thead {
+        display: table-header-group;
+        background-color: $color-table-header-background;
+      }
+      &> tbody {
+        &> tr {
+          display: table-row;
+          &> td {
+            border: 1px solid $color-table-border;
+          }
+          .format-name {
+            background-color: inherit;
+          }
+          .format-description {
+            border: 1px solid $color-table-border;
+          }
+          .format-download {
+            display: table-cell;
+            border: 1px solid $color-table-border;
+            width: 15%;
+          }
+          .format-form {
+            display: table-cell;
+            border: 1px solid $color-table-border;
+            width: 15%;
+          }
+        }
+      }
+    }
+  }
+  .jichikai-formats {
+    &> table {
+      &> tbody {
+        &> tr {
+          padding-bottom: 0;
+        }
+      }
+    }
+  }
+  .jichitai-formats {
+    &> table {
+      &> tbody {
+        &> tr {
+          .format-name {
+            width: 40%;
+          }
+          .format-description {
+            width: 60%;
+          }
+        }
+      }
+    }
+  }
+}

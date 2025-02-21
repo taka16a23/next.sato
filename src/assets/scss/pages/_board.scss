@@ -1,0 +1,32 @@
+.main-area:has(.board-container) {
+  background-color: #E6F3EC;
+}
+.board-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+.board .main-body {
+  padding-top: 32px;
+}
+.board-item {
+  padding-bottom: 32px;
+}
+.board-item-container-inner {
+  display: flex;
+  flex-direction: column-reverse;
+}
+.board-title {
+  text-align: center;
+  font-weight: bold;
+}
+.board-body {
+  &:hover {
+    margin: -3px;
+    border: 3px solid #CCC;
+  }
+}
+.main-item.board {
+  background-color: #E6F3EC;
+}

@@ -1,0 +1,136 @@
+
+footer {
+  color: $color-foreground-contrast-default;
+  width: 100%;
+  background-color: $color-brand-mute;
+  border-top: solid 10px $color-brand-default;
+  margin-top: 16px;
+
+  a {
+    color: $color-foreground-contrast-default;
+    &:hover {
+      color: $color-foreground-contrast-default;
+      text-decoration: underline;
+    }
+  }
+
+  .footer-container {
+    display: flex;
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    flex-direction: column-reverse;
+        
+    .sitemap-area {
+      width: 100%;
+      padding-top: 10px;
+
+      .sitemap {
+        float: left;
+        margin-top: 20px;
+        margin-left: 10px;
+        min-width: 150px;
+
+        .sitemap-title {
+          font-size: 16px;
+          letter-spacing: 2px;
+          font-weight: bold;
+        }
+
+        .sitemap-list {
+          margin-left: 0.5rem;
+          .sitemap-item {
+            line-height: 1.6rem;
+          }
+        }
+      }
+    }
+    .aboutme-area {
+      width: 100%;
+      height: fit-content;
+      padding: 30px;
+      background-color: $color-brand-default;
+      border-radius: 0px 0px 15px 15px;
+      
+      .aboutme-title {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: bold;
+        
+        a:hover {
+          opacity: 0.8;
+          text-decoration: none;
+        }
+      }
+      .aboutme-body {
+        margin-left: 0;
+        text-align: center;
+        &> .aboutme-item {
+          line-height: 1.2rem;
+        }
+      }
+    }
+  }
+
+  .copyright {
+    margin-top: 20px;
+    background-color: $color-brand-default;
+    text-align: center;
+  }
+}
+
+@media screen and (min-width:map-get($breakpoints, sm)) {
+  footer {
+    .footer-container {
+      .aboutme-area {
+        width: 100%;
+        .aboutme-title {
+          text-align: center;
+        }
+        .aboutme-body {
+          margin-left: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:map-get($breakpoints, md)) {
+  footer {
+    .footer-container {
+      .aboutme {
+        width: 100%;
+        .aboutme-title {
+          text-align: center;
+        }
+        .aboutme-body {
+          margin-left: 0;
+          text-align: center;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width:map-get($breakpoints, lg)) {
+  footer {
+    .footer-container {
+      flex-direction: row;
+      .sitemap-area {
+        width: 70%;
+        padding-top: 70px;
+      }
+      .aboutme-area {
+        width: fit-content;
+        .aboutme-title {
+          text-align: left;
+        }
+        .aboutme-body {
+          margin-left: 20px;
+          text-align: left;
+        }
+      }
+    }
+  }
+}
