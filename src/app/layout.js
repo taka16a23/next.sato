@@ -5,6 +5,7 @@ import AliasRoutes from "@/routes/AliasRoutes";
 import Image from 'next/image'
 import HeaderImg from '@/assets/images/header.webp';
 import NewsFooter from '@/components/footers/NewsFooter';
+import BoardsFooter from '@/components/footers/BoardsFooter';
 
 
 export default function RootLayout({ children }) {
@@ -122,6 +123,7 @@ export default function RootLayout({ children }) {
                           <h3 className="sitemap-title">
                             <Link href={AliasRoutes.Board} as={AliasRoutes.Board}>回覧板</Link>
                           </h3>
+                          <BoardsFooter/>
                         </div>
                         <div className="sitemap sitemap-security">
                           <h3 className="sitemap-title">
