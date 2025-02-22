@@ -3,6 +3,8 @@ import Link from 'next/link'
 import AliasRoutes from "@/routes/AliasRoutes";
 import { ServiceFactory } from '@/services';
 import NewsList from '@/components/NewsList';
+import TodayEvents from '@/components/events/TodayEvents';
+import TomorrowEvents from '@/components/events/TomorrowEvents';
 
 
 export default function Page() {
@@ -57,7 +59,7 @@ export default function Page() {
                 </div>
               </a>
             </div>
-            {/* <TodayEvents/> */}
+            <TodayEvents/>
           </div>
         </div>
         <div className="side-item">
@@ -67,7 +69,7 @@ export default function Page() {
             </a>
           </h2>
           <div className="side-body daily-tomorrow">
-            {/* <TomorrowEvents/> */}
+            <TomorrowEvents/>
           </div>
         </div>
       </div>
