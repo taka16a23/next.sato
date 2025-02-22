@@ -2,7 +2,7 @@
 import React, { Component } from "react";
 import Link from 'next/link'
 import AliasRoutes from "@/routes/AliasRoutes";
-import styles from "@/assets/scss/sidelayout.module.css";
+import { ServiceFactory } from '@/services';
 
 
 export default class NewsNavigation extends Component {
@@ -27,8 +27,8 @@ export default class NewsNavigation extends Component {
 
   render() {
     return (
-      <li className={styles["submenu-item"]}>
-        <h2 className="submenu-label" onCliLck={this.handleOnClick.bind(this)}>過去のおしらせ</h2>
+      <li className="submenu-item">
+        <h2 className="submenu-label" onClick={this.handleOnClick.bind(this)}>過去のおしらせ</h2>
         <ul className={this.state.isActive === true ? "menu-list" : "menu-list hide"}>
           <li className="memu-item">
             <Link className="menu-label" href={AliasRoutes.News} as={AliasRoutes.News} title={"2020年のおしらせを見る"}>

@@ -1,4 +1,5 @@
-import "@/assets/scss/global.css";
+// import "@/assets/scss/global.css";
+import "@/assets/scss/style.min.css";
 import Link from 'next/link'
 import AliasRoutes from "@/routes/AliasRoutes";
 import Image from 'next/image'
@@ -18,7 +19,7 @@ export default function RootLayout({ children }) {
                     <div className="container">
                       <div className="container-inner">
                         <div className="header-image">
-                          <Link href={AliasRoutes.Top} as={AliasRoutes.Top} className="menu-label" alt="home" title="トップページへ">
+                          <Link href={AliasRoutes.Top} as={AliasRoutes.Top} className="" alt="home" title="トップページへ">
                             <Image src={HeaderImg} alt="笹間山の頂上八畳岩から撮影された里自治会町内" height="236" width="944" priority={true}/>
                           </Link>
                         </div>
