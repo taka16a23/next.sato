@@ -13,9 +13,6 @@ export default class AboutNavigation extends Component {
     }
   }
 
-  componentDidMount() {
-  }
-
   handleOnClick(ev) {
     this.setState({
       isActive: !this.state.isActive

@@ -1,7 +1,9 @@
 "use client"
 import React, { Component } from "react";
 import Link from 'next/link'
+
 import AliasRoutes from "@/routes/AliasRoutes";
+import { ServiceFactory } from '@/services';
 
 
 export default class ActivityNavigation extends Component {
@@ -16,6 +18,15 @@ export default class ActivityNavigation extends Component {
   }
 
   componentDidMount() {
+    var service = ServiceFactory.createActivitiesService();
+    service.listYears().then(years => {
+      this.years = years;
+      this.setState({
+        yearsLength: this.years.length,
+      });
+    }).catch(err => {
+      alert(err);
+    });
   }
 
   handleOnClick(ev) {
@@ -29,21 +40,13 @@ export default class ActivityNavigation extends Component {
       <li className="submenu-item">
         <h2 className="submenu-label" onClick={this.handleOnClick.bind(this)}>活動報告</h2>
         <ul className={this.state.isActive === true ? "menu-list" : "menu-list hide"}>
-          <li className="memu-item">
-            <Link className="menu-label" href={AliasRoutes.Activities} as={AliasRoutes.Activities} title={"2020年のおしらせを見る"}>
-              {"2020" + "年"}
-            </Link>
-          </li>
-          <li className="memu-item">
-            <Link className="menu-label" href={AliasRoutes.Activities} as={AliasRoutes.Activities} title={"2020年のおしらせを見る"}>
-              {"2021" + "年"}
-            </Link>
-          </li>
-          <li className="memu-item">
-            <Link className="menu-label" href={AliasRoutes.Activities} as={AliasRoutes.Activities} title={"2020年のおしらせを見る"}>
-              {"2022" + "年"}
-            </Link>
-          </li>
+          {this.years.map((year) =>
+            <li key={year} className="memu-item">
+              <Link className="menu-label" href={AliasRoutes.ActivitiesYear + "/" + year} as={AliasRoutes.ActivitiesYear + "/" + year} title={year + "年の活動を見る"} onClick={() => this.handleOnClick.bind(year)}>
+                {year + "年"}
+              </Link>
+            </li>
+          )}
         </ul>
       </li>
     );
