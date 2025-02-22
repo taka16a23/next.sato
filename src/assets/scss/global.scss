@@ -88,5 +88,30 @@
   .menu-area {
     display: block;
   }
-}
+  #content > .content-inner > .container {
+	  display: flex;
 
+    .main-area {
+	    flex: 1;
+	    margin: 0 30px;
+      min-height: 600px;
+
+      .news-item {
+        .news-category {
+          display: table-cell;
+        }
+      }
+    }
+    .emergency-list {
+      display: flex !important;
+      .emergency-item {
+        width: 50%;
+      }
+      .emergency-item + .emergency-item {
+        padding-left: 16px !important;
+        padding-top: 0 !important;
+      }
+    }
+
+  }
+}
