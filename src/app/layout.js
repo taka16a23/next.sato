@@ -4,8 +4,7 @@ import Link from 'next/link'
 import AliasRoutes from "@/routes/AliasRoutes";
 import Image from 'next/image'
 import HeaderImg from '@/assets/images/header.webp';
-import NewsFooter from '@/components/footers/NewsFooter';
-import BoardsFooter from '@/components/footers/BoardsFooter';
+import footers from '@/components/footers';
 
 
 export default function RootLayout({ children }) {
@@ -112,18 +111,19 @@ export default function RootLayout({ children }) {
                           <h3 className="sitemap-title">
                             <Link href={AliasRoutes.News} as={AliasRoutes.News}>おしらせ</Link>
                           </h3>
-                          <NewsFooter/>
+                          <footers.NewsFooter/>
                         </div>
                         <div className="sitemap sitemap-activity">
                           <h3 className="sitemap-title">
                             <Link href={AliasRoutes.Activities} as={AliasRoutes.Activities}>ご報告</Link>
                           </h3>
+                          <footers.ActivitiesFooter/>
                         </div>
                         <div className="sitemap sitemap-board">
                           <h3 className="sitemap-title">
                             <Link href={AliasRoutes.Board} as={AliasRoutes.Board}>回覧板</Link>
                           </h3>
-                          <BoardsFooter/>
+                          <footers.BoardsFooter/>
                         </div>
                         <div className="sitemap sitemap-security">
                           <h3 className="sitemap-title">
