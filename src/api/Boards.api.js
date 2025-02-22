@@ -7,6 +7,6 @@ export default class BoardsAPI extends API {
   static PATH = AliasRoutes.API_Boards;
 
   constructor() {
-    super(process.env.REACT_APP_API_URL, BoardsAPI.PATH);
+    super(process.env.NEXT_PUBLIC_APP_API_URL, BoardsAPI.PATH);
   }
 }

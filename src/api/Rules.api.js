@@ -7,6 +7,6 @@ export default class RulesAPI extends API {
   static PATH = AliasRoutes.API_Rules;
 
   constructor() {
-    super(process.env.REACT_APP_API_URL, RulesAPI.PATH);
+    super(process.env.NEXT_PUBLIC_APP_API_URL, RulesAPI.PATH);
   }
 }

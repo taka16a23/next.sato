@@ -1,6 +1,7 @@
 "use client"
 import React, { Component } from "react";
 import Link from 'next/link'
+
 import AliasRoutes from "@/routes/AliasRoutes";
 import { ServiceFactory } from '@/services';
 
@@ -17,6 +18,15 @@ export default class NewsNavigation extends Component {
   }
 
   componentDidMount() {
+    var newsService = ServiceFactory.createNewsService();
+    newsService.listYears().then(years => {
+      this.years = years;
+      this.setState({
+        yearsLength: this.years.length,
+      });
+    }).catch(err => {
+      alert(err);
+    });
   }
 
   handleOnClick(ev) {
@@ -30,21 +40,13 @@ export default class NewsNavigation extends Component {
       <li className="submenu-item">
         <h2 className="submenu-label" onClick={this.handleOnClick.bind(this)}>過去のおしらせ</h2>
         <ul className={this.state.isActive === true ? "menu-list" : "menu-list hide"}>
-          <li className="memu-item">
-            <Link className="menu-label" href={AliasRoutes.News} as={AliasRoutes.News} title={"2020年のおしらせを見る"}>
-              {"2020" + "年"}
-            </Link>
-          </li>
-          <li className="memu-item">
-            <Link className="menu-label" href={AliasRoutes.News} as={AliasRoutes.News} title={"2020年のおしらせを見る"}>
-              {"2021" + "年"}
-            </Link>
-          </li>
-          <li className="memu-item">
-            <Link className="menu-label" href={AliasRoutes.News} as={AliasRoutes.News} title={"2020年のおしらせを見る"}>
-              {"2022" + "年"}
-            </Link>
-          </li>
+          {this.years.map((year) =>
+            <li className="memu-item" key={year}>
+              <Link className="menu-label" href={AliasRoutes.News + "/year/" + year} as={AliasRoutes.News + "/year/" + year} title={year + "年のおしらせを見る"} prefetch={false}>
+                {year + "年"}
+              </Link>
+            </li>
+          )}
         </ul>
       </li>
     );

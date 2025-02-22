@@ -7,6 +7,6 @@ export default class QueryAPI extends API {
   static PATH = AliasRoutes.API_Query;
 
   constructor() {
-    super(process.env.REACT_APP_API_URL, QueryAPI.PATH);
+    super(process.env.NEXT_PUBLIC_APP_API_URL, QueryAPI.PATH);
   }
 }
