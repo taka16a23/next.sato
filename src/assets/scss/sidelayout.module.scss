@@ -1,0 +1,181 @@
+// 変数
+@import "variables/variables.scss";
+
+.side-area {
+  font-size: 0.9rem;
+
+  .a23-btn.security-portal {
+    width: 100%;
+    line-height: 48px;
+    background: -moz-linear-gradient(top,  #cb796b 0%, #af3521 8%, #a82812 11%, #a52812 22%, #8f2310 57%, #87210f 76%, #7e1f0e 86%, #7e1f0e 89%, #832b1c 92%, #ab7167 100%);
+    background: -webkit-linear-gradient(top,  #cb796b 0%,#af3521 8%,#a82812 11%,#a52812 22%,#8f2310 57%,#87210f 76%,#7e1f0e 86%,#7e1f0e 89%,#832b1c 92%,#ab7167 100%);
+    background: linear-gradient(to bottom,  #cb796b 0%,#af3521 8%,#a82812 11%,#a52812 22%,#8f2310 57%,#87210f 76%,#7e1f0e 86%,#7e1f0e 89%,#832b1c 92%,#ab7167 100%);
+    border-radius: 6px 6px 6px 6px;
+
+    .a23-btn-label {
+      display: block;
+      width: 100%;
+      color: $color-security-button-foreground-default;
+      font-size: 1.1rem;
+      font-weight: bold;
+      text-align: center;
+      vertical-align: middle;
+      letter-spacing: 4px;
+      text-decoration: none;
+    }
+
+    &:hover {
+      opacity: 0.8;
+      text-decoration: underline;
+    }
+  }
+  
+  .submenu {
+    display: none;
+    margin-top: 16px !important;
+  }
+
+  .side-item + .side-item {
+    margin-top: 36px;
+  }
+
+  .side-item {
+    margin-bottom: 16px;
+
+    .side-title {
+      background: $color-brand-default;
+	    color: $color-foreground-contrast-default;
+	    font-size: 1.2rem;
+	    font-weight: normal;
+	    margin: 0 0 16px;
+      letter-spacing: 4px;
+      font-weight: bold;
+      line-height: 48px;
+      text-align: center;
+      &:hover {
+        opacity: 0.8;
+      }
+      a {
+        display: block;
+        color: $color-foreground-contrast-default;
+        text-decoration: none;
+        span {
+	        margin: 5px 20px;
+        }
+        &:hover {
+          color: $color-foreground-contrast-default;
+          text-decoration: underline;
+        }
+      }
+    }
+    .daily-today,
+    .daily-tomorrow {
+      .daily-calendar {
+        margin-bottom: 16px;
+
+        &:hover {
+          opacity: 0.8;
+        }
+
+        a:hover {
+          color: $color-foreground-mute;
+          text-decoration: none;
+        }
+        
+        .daily-year {
+          font-weight: bold;
+          color: $color-foreground-mute;
+          letter-spacing: 2px;
+        }
+        
+        .daily-date {
+          text-align: center;
+          color: $color-foreground-mute;
+          .daily-day {
+            letter-spacing: 4px;
+          }
+
+          .daily-date-num {
+            color: $color-foreground-default;
+            font-weight: bold;
+            font-size: 50px;
+            line-height: 46px;
+          }
+        }
+        .daily-weekly {
+          text-align: center;
+          font-weight: bold;
+          color: $color-foreground-mute;
+          letter-spacing: 2px;
+        }
+      }
+      .daily-item {
+        margin-bottom: 14px;
+        .daily-label {
+          font-weight: bold;
+          text-align: center;
+          text-decoration: underline;
+          text-underline-offset: 4px;
+          text-decoration-thickness: 2px;
+          text-decoration-color: $color-brand-default;
+        }
+      }
+      .daily-link {
+        color: $color-foreground-mute;
+        text-decoration: none;
+        text-align: center;
+      }
+    }
+  }
+}
+
+/* 1024px以上 */
+@media screen and (min-width:map-get($breakpoints, lg)) {
+
+  .side-area {
+	  width: 200px;
+
+    .submenu {
+      display: block;
+      
+      .submenu-item {
+        margin-bottom: 10px;
+
+        .submenu-label {
+          padding: 8px 10px 8px 10px;
+          text-align: center;
+          font-weight: bold;
+          letter-spacing: 3px;
+          font-size: 16px;
+          cursor: pointer;
+          color: $color-foreground-contrast-default;
+          text-decoration: none;
+          display: block;
+          line-height: 30px;
+          outline: none;
+          background-color: $color-brand-default;
+          position: relative;
+
+          &:hover {
+            opacity: 0.8;
+          }
+        }
+        
+        .memu-item {
+          background-color: rgba(0,0,0,0.03);
+          background-image: linear-gradient(to bottom, #f5f5f5, #ededed);    
+
+          &:hover {
+            background-color: $color-select-background-default;
+            background-image: linear-gradient(to bottom, #E8E9E8, #D4D6D4);    
+          }
+
+          .menu-label {
+            display: block;
+            padding: 4px 10px;
+          }
+        }
+      }
+    }
+  }
+}
