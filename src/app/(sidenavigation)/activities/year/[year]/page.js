@@ -15,7 +15,6 @@ export default class Page extends Component {
     super(props)
     this.models = [];
     this.state = {
-      year: (new Date()).getFullYear(),
       modelLength: this.models.length,
       isLoading: false,
     }
@@ -23,7 +22,7 @@ export default class Page extends Component {
 
   componentDidMount() {
     var service = ServiceFactory.createActivitiesService();
-    service.listActivities(this.state.year).then(arrModels => {
+    service.listActivities(this.props.params.year).then(arrModels => {
       this.models = arrModels;
       this.setState({
         modelLength: this.models.length,
@@ -66,7 +65,7 @@ export default class Page extends Component {
           <main id="main">
             <section className="main-item faq-wrapper">
               <h2 className="main-title faq-title">
-                <span className="title">{this.state.year + '年 '} 活動報告</span>
+                <span className="title">{this.props.params.year + '年 '} 活動報告</span>
               </h2>
               <ul className="tile-list">
                 {this.getSkeltons()}
@@ -81,7 +80,7 @@ export default class Page extends Component {
         <main id="main">
           <section className="main-item faq-wrapper">
             <h2 className="main-title faq-title">
-              <span className="title">{this.state.year + '年 '} 活動報告</span>
+              <span className="title">{this.props.params.year + '年 '} 活動報告</span>
             </h2>
             <ul className="tile-list">
               {this.models.map((oModel) =>

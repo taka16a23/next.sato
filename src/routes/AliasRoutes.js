@@ -29,7 +29,7 @@ export default class AliasRoutes {
   static NewsYear = AliasRoutes.News + "/year";
   static Activities = "/activities";
   static ActivitiesYear = AliasRoutes.Activities + "/year";
-  static Activity = "/activity/:id";
+  static Activity = AliasRoutes.Activities + "/:id";
   static Security = "/security";
   static SecurityPortal = AliasRoutes.Security + "/portal";
   static SecurityMap = AliasRoutes.Security + "/map";
