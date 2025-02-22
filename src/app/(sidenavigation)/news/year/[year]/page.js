@@ -7,7 +7,7 @@ import NewsList from '@/components/NewsList';
 export default class Page extends Component {
 
   static defaultProps = {
-    limit: 20,
+    limit: 100,
   }
 
   render() {
@@ -16,10 +16,10 @@ export default class Page extends Component {
         <main id="main">
           <section className="main-item">
             <h2 className="main-title">
-              <span className="title">最新のお知らせ</span>
+              <span className="title">{this.props.params.year + "年 お知らせ一覧"}</span>
             </h2>
             <div className="main-body news">
-              <NewsList limit={this.props.limit}/>
+              <NewsList year={this.props.params.year} limit={this.props.limit}/>
             </div>
           </section>
         </main>
