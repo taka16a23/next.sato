@@ -1,8 +1,8 @@
 import "@/assets/scss/global.css";
 import Link from 'next/link'
 import AliasRoutes from "@/routes/AliasRoutes";
-import HeaderImg from '@/assets/images/header.webp';
 import Image from 'next/image'
+import HeaderImg from '@/assets/images/header.webp';
 
 
 export default function RootLayout({ children }) {
