@@ -27,9 +27,7 @@ export default function SideNavigationLayout({ children }) {
             </ul>
           </div>
         </div>
-        <div className='main-area'>
-          {children}
-        </div>
+        {children}
       </div>
   )
 }
