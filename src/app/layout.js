@@ -4,6 +4,7 @@ import Link from 'next/link'
 import AliasRoutes from "@/routes/AliasRoutes";
 import Image from 'next/image'
 import HeaderImg from '@/assets/images/header.webp';
+import NewsFooter from '@/components/footers/NewsFooter';
 
 
 export default function RootLayout({ children }) {
@@ -110,6 +111,7 @@ export default function RootLayout({ children }) {
                           <h3 className="sitemap-title">
                             <Link href={AliasRoutes.News} as={AliasRoutes.News}>おしらせ</Link>
                           </h3>
+                          <NewsFooter/>
                         </div>
                         <div className="sitemap sitemap-activity">
                           <h3 className="sitemap-title">
