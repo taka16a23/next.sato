@@ -1,6 +1,6 @@
 export default function Page() {
   return (
-    <div>
+    <div className="main-area">
       <p>news page</p>
     </div>
   );
