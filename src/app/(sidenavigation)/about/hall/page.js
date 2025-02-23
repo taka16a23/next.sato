@@ -2,6 +2,7 @@
 import React, { Component } from "react";
 
 import { connect } from 'react-redux';
+import ContentLoader from "react-content-loader"
 
 import { HallRequestModel } from '@/models';
 import { HallRequestConfirmModal } from '@/components/modals';
@@ -31,7 +32,7 @@ class Page extends Component {
     };
     this.state = {
       room: "1",
-      isLoaded: false,
+      isLoading: true,
       errorMessages: this.errorMessages,
     }
   }
@@ -191,7 +192,7 @@ class Page extends Component {
 
   onLoaded() {
     this.setState({
-      isLoaded: true,
+      isLoading: false,
     });
   }
 
@@ -206,7 +207,17 @@ class Page extends Component {
             </h2>
             <p>町内団体使用の場合は無料。</p>
             <p>その他団体の貸館料金は相談の上決定する。</p>
-            <iframe title="里公民館カレンダー" src="https://calendar.google.com/calendar/embed?showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=6m5ne5kcfmkek4t0ba37o95olo%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Asia%2FTokyo" height="600" style={{width: "100%",borderWidth: 0, display: this.state.isLoaded !== true ? "none" : "block"}} frameBorder="0" scrolling="no" onLoad={this.onLoaded.bind(this)}></iframe>
+            <ContentLoader
+               speed={2}
+               width="100%"
+               height={600}
+               backgroundColor="#f3f3f3"
+               foregroundColor="#ecebeb"
+               style={{display: this.state.isLoading === true ? "block" : "none"}}
+            >
+              <rect x="0" y="0" rx="0" ry="0" width="100%" height="600"/>
+            </ContentLoader>
+            <iframe title="里公民館カレンダー" src="https://calendar.google.com/calendar/embed?showCalendars=0&amp;showTz=0&amp;height=600&amp;wkst=1&amp;bgcolor=%23FFFFFF&amp;src=6m5ne5kcfmkek4t0ba37o95olo%40group.calendar.google.com&amp;color=%23B1365F&amp;ctz=Asia%2FTokyo" height="600" style={{width: "100%",borderWidth: 0, display: this.state.isLoading === true ? "none" : "block"}} frameBorder="0" scrolling="no" onLoad={this.onLoaded.bind(this)}></iframe>
           </section>
           <section className="main-item">
             <h2 className="main-title">
