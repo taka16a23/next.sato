@@ -1,10 +1,12 @@
 // import "@/assets/scss/global.css";
 import "@/assets/scss/style.min.css";
 import Link from 'next/link'
+
 import AliasRoutes from "@/routes/AliasRoutes";
 import Image from 'next/image'
 import HeaderImg from '@/assets/images/header.webp';
 import footers from '@/components/footers';
+import { ReduxProvider } from '@/redux/ReduxProvider';
 
 
 export default function RootLayout({ children }) {
@@ -101,7 +103,9 @@ export default function RootLayout({ children }) {
                   </div>
                 </header>
                 <div className="content-inner">
-                  {children}
+                  <ReduxProvider>
+                    {children}
+                  </ReduxProvider>
                 </div>
                 <footer id="footer">
                   <div className="footer-inner">
