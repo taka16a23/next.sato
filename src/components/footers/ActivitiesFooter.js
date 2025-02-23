@@ -17,7 +17,7 @@ export default class ActivitiesFooter extends Component {
   }
 
   componentDidMount() {
-    let service = ServiceFactory.createBoardsService();
+    let service = ServiceFactory.createActivitiesService();
     service.listYears().then(years => {
       this.years = years;
       this.setState({
