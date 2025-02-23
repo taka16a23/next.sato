@@ -163,3 +163,4 @@ cython_debug/
 next-swc.linux-x64-musl.node
 next-swc.linux-x64-gnu.node
 .next
+node_modules/*
