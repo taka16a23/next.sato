@@ -237,11 +237,11 @@ export default class Page extends Component {
                         <div className="board-item-container">
                           <div className="board-item-container-inner">
                             <div className="board-title text-mute">
-                              <a href={oModel.getFile()} target="_blank" rel="noreferrer">{oModel.getTitle()}</a>
+                              <a href={process.env.NEXT_PUBLIC_APP_API_URL + oModel.getFile()} target="_blank" rel="noreferrer">{oModel.getTitle()}</a>
                             </div>
                             <div className="board-body">
-                              <a href={oModel.getFile()} target="_blank" rel="noreferrer">
-                                <img src={oModel.getThumbnail()} width="280" height="360" alt="board"/>
+                              <a href={process.env.NEXT_PUBLIC_APP_API_URL + oModel.getFile()} target="_blank" rel="noreferrer">
+                                <img src={process.env.NEXT_PUBLIC_APP_API_URL + oModel.getThumbnail()} width="280" height="360" alt="board"/>
                               </a>
                             </div>
                           </div>

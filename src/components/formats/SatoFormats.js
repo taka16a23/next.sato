@@ -187,7 +187,7 @@ export default class SatoFormats extends Component {
               </td>
               <td className="format-download">
                 {oModel.file === null ? undefined :
-                 <a href={oModel.file} target="_blank" rel="noreferrer">
+                 <a href={process.env.NEXT_PUBLIC_APP_API_URL + oModel.file} target="_blank" rel="noreferrer">
                    <div>
                      <img src={downlaodImg.src} width="24" height="32" alt="ダウンロード"/>
                    </div>

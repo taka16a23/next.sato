@@ -62,7 +62,7 @@ export default class Page extends Component {
               <span className="title">{this.state.model.title}</span>
             </h2>
             <div>
-              <div dangerouslySetInnerHTML={{__html: this.state.model.body}} />
+              <div dangerouslySetInnerHTML={{__html: this.state.model.body.replaceAll('/media/', process.env.NEXT_PUBLIC_APP_API_URL + '/media/')}} />
             </div>
           </section>
         </main>

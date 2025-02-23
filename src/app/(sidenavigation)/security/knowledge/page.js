@@ -83,7 +83,7 @@ export default class Page extends Component {
               {this.models.map((oModel) =>
                 <li className="tile-item" key={oModel.id}>
                   <a href={oModel.url} target="_blank" rel="noreferrer">
-                    <img className="tile-image" src={oModel.thumbnail} alt={oModel.title}/>
+                    <img className="tile-image" src={process.env.NEXT_PUBLIC_APP_API_URL + oModel.thumbnail} alt={oModel.title}/>
                     <h4 className="tile-title">{oModel.title}</h4>
                     <div className="tile-description">
                       <p className="tile-text" dangerouslySetInnerHTML={{ __html: oModel.description }}>

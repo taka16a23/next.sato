@@ -39,7 +39,7 @@ export default class Page extends Component {
               <div className="main-content rule-content">
                 {oModel.listImages().map((oImageModel) =>
                   <div className="rule-image" key={oImageModel.id}>
-                    <a href={oModel.document} target="_blank" rel="noreferrer noopener" title="PDFをダウンロード">
+                    <a href={process.env.NEXT_PUBLIC_APP_API_URL + oModel.document} target="_blank" rel="noreferrer noopener" title="PDFをダウンロード">
                       <img src={process.env.NEXT_PUBLIC_APP_API_URL + oImageModel.image} alt={oImageModel.id} width="760" height="1076"/>
                     </a>
                   </div>

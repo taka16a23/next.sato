@@ -87,7 +87,7 @@ export default class Page extends Component {
               {this.models.map((oModel) =>
                 <li className="tile-item" key={oModel.id}>
                   <Link href={AliasRoutes.Activity.replace(':id', oModel.id)} as={AliasRoutes.Activity.replace(':id', oModel.id)}>
-                    <img className="tile-image" src={oModel.image} alt={oModel.title}/>
+                    <img className="tile-image" src={process.env.NEXT_PUBLIC_APP_API_URL + oModel.image} alt={oModel.title}/>
                     <h4 className="tile-title">{oModel.title}</h4>
                     <div className="tile-sub">
                       <p>{moment(oModel.publish_date).format('YYYY/MM/DD')}</p>

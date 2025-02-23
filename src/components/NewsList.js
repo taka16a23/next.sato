@@ -78,7 +78,7 @@ export default class NewsList extends Component {
       <ul className="news-list">
         {this.models.map((oNewsModel) =>
           <li className="news-item" key={oNewsModel.id}>
-            <Link className="news-link" href={oNewsModel.url} as={oNewsModel.url} target={oNewsModel.news_category_display.name === "回覧" ? "_blank" : ""} prefetch={false}>
+            <Link className="news-link" href={(oNewsModel.news_category_display.name === "回覧" ? process.env.NEXT_PUBLIC_APP_API_URL : "") + oNewsModel.url.replace('activity', 'activities')} as={(oNewsModel.news_category_display.name === "回覧" ? process.env.NEXT_PUBLIC_APP_API_URL : "") + oNewsModel.url.replace('activity', 'activities')} target={oNewsModel.news_category_display.name === "回覧" ? "_blank" : ""} prefetch={false}>
               <span className="news-cell news-date">{moment(oNewsModel.publish_date).format('YYYY/MM/DD')}</span>
               <p className="news-cell news-category">
                 <span className="news-category-label news-category-board" style={{color: oNewsModel.news_category_display.fgcolor, backgroundColor: oNewsModel.news_category_display.bgcolor}}>{oNewsModel.news_category_display.name}</span>
