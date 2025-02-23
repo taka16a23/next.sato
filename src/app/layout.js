@@ -1,12 +1,13 @@
 // import "@/assets/scss/global.css";
 import "@/assets/scss/style.min.css";
 import Link from 'next/link'
+import Image from 'next/image'
+
+import { ReduxProvider } from '@/redux/ReduxProvider';
 
 import AliasRoutes from "@/routes/AliasRoutes";
-import Image from 'next/image'
 import HeaderImg from '@/assets/images/header.webp';
 import footers from '@/components/footers';
-import { ReduxProvider } from '@/redux/ReduxProvider';
 
 
 export default function RootLayout({ children }) {

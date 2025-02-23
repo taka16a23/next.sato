@@ -1,11 +1,12 @@
 import Link from 'next/link'
+
 import AliasRoutes from "@/routes/AliasRoutes";
 import NewsNavigation from '@/components/navigations/NewsNavigation';
 import ActivityNavigation from '@/components/navigations/ActivityNavigation';
 import SecurityNavigation from '@/components/navigations/SecurityNavigation';
 import BoardNavigation from '@/components/navigations/BoardNavigation';
 import AboutNavigation from '@/components/navigations/AboutNavigation';
-import styles from "@/assets/scss/sidelayout.module.css";
+// import styles from "@/assets/scss/sidelayout.module.css";
 
 
 export default function SideNavigationLayout({ children }) {
