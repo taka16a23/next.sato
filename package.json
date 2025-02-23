@@ -17,7 +17,10 @@
     "react-compress": "^3.6.4",
     "react-content-loader": "^7.0.2",
     "react-dom": "^19.0.0",
-    "react-redux": "^9.2.0"
+    "react-lottie": "^1.2.10",
+    "react-redux": "^9.2.0",
+    "reactstrap": "^9.2.3",
+    "redux-thunk": "^3.1.0"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
