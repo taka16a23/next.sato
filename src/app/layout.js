@@ -8,9 +8,10 @@ import { ReduxProvider } from '@/redux/ReduxProvider';
 import AliasRoutes from "@/routes/AliasRoutes";
 import HeaderImg from '@/assets/images/header.webp';
 import footers from '@/components/footers';
-
+import axiosSetup from '@/helpers/interceptors';
 
 export default function RootLayout({ children }) {
+  axiosSetup()
   return (
     <html lang="ja">
       <body>
