@@ -76,6 +76,20 @@ export default class Page extends Component {
         </div>
       )
     }
+    if(this.models.length <= 0) {
+      return (
+        <div className='main-area'>
+          <main id="main">
+            <section className="main-item faq-wrapper">
+              <h2 className="main-title faq-title">
+                <span className="title">{this.state.year + '年 '} 活動報告</span>
+              </h2>
+              <div style={{textAlign: "center"}}>記事が存在しません</div>
+            </section>
+          </main>
+        </div>
+      );
+    }
     return (
       <div className='main-area'>
         <main id="main">

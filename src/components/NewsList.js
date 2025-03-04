@@ -74,6 +74,11 @@ export default class NewsList extends Component {
         </ContentLoader>
       )
     }
+    if(this.models.length <= 0) {
+      return (
+        <div style={{textAlign: "center"}}>表示する記事がありません</div>
+      )
+    }
     return (
       <ul className="news-list">
         {this.models.map((oNewsModel) =>
