@@ -221,6 +221,28 @@ export default class Page extends Component {
         </div>
       )
     }
+    if(this.models.length <= 0) {
+      return (
+        <div className='main-area'>
+          <main id="main">
+            <div className={1 <= this.state.modelLength ? "main-item board" : "main-item"}>
+              <h2 className="main-title">
+                <span className="title">{this.props.year + '年 '}回覧板</span>
+              </h2>
+              <div className="main-body">
+                <div className="board-container">
+                  <div className="board-container-inner">
+                    <div className="board-list">
+                      <div>表示する記事がありません。</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </main>
+        </div>
+      )
+    }
     return (
       <div className='main-area'>
         <main id="main">
@@ -232,7 +254,7 @@ export default class Page extends Component {
               <div className="board-container">
                 <div className="board-container-inner">
                   <div className="board-list">
-                    {this.models.length <= 0 ? <div>表示する記事がありません。</div> : this..models.map((oModel) =>
+                    {this.models.map((oModel) =>
                       <div className="board-item" key={oModel.id}>
                         <div className="board-item-container">
                           <div className="board-item-container-inner">
