@@ -187,7 +187,9 @@ class Page extends Component {
     if (isFinished !== true) {
       return;
     }
-    window.location.reload();
+    if (process.browser) {
+      window.location.reload();
+    }
   }
 
   onLoaded() {
