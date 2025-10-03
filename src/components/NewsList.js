@@ -53,9 +53,9 @@ export default class NewsList extends Component {
 
   getRects() {
     var elements = [];
-    elements.push(<rect x="0" y="0" rx="0" ry="0" height="54" style={{ width: '100%' }}/>);
+    elements.push(<rect key={-1} x="0" y="0" rx="0" ry="0" height="54" style={{ width: '100%' }}/>);
     for (var i = 0; i < this.props.limit; i++) {
-      elements.push(<rect x="0" y={i * 56} rx="0" ry="0" height="54" style={{ width: '100%' }}/>);
+      elements.push(<rect key={i} x="0" y={i * 56} rx="0" ry="0" height="54" style={{ width: '100%' }}/>);
     }
     return elements;
   }
