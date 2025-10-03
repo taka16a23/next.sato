@@ -5,7 +5,6 @@ import { connect } from 'react-redux';
 
 import FQA from '@/components/FQA'
 import { QueryModel } from "@/models";
-import { QueryConfirmModal } from '@/components/modals';
 import {
   openQueryConfirmModal,
   closeQueryConfirmModal,
@@ -111,7 +110,6 @@ class Page extends Component {
     return (
       <div className='main-area'>
         <main id="main">
-          <QueryConfirmModal model={this.model} onClosed={this.handleCloseModal.bind(this)}/>
           <FQA/>
           <section className="main-item">
             <h2 className="main-title">
@@ -140,7 +138,7 @@ class Page extends Component {
                 </div>
               </fieldset>
               <div>
-                <input className="btn form-btn-submit" name="submit" type="submit" value="確認画面へ" formNoValidate={true}/>
+                <input className="btn form-btn-submit" name="submit" type="submit" value="確認画面へ" formNoValidate={true} disabled={true}/>
               </div>
             </form>
           </section>
