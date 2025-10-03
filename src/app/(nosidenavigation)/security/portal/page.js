@@ -37,6 +37,8 @@ export default class Page extends Component {
                                  serverDateTime.getMonth(), serverDateTime.getDate(),
                                  serverDateTime.getHours(), minutes);
       let riverDateTime = moment(fixDateTime);
+      console.log("DEBUG-1-page.js")
+      console.log(riverDateTime);
       this.setState({
         riverDateTime: riverDateTime,
       });
@@ -113,7 +115,7 @@ export default class Page extends Component {
               <div className="rivercam-container">
                 <div className="riverAlertEntry">
                   <a href="http://c.shiga-bousai.jp/shigapref/pc/camDetail_6191FF05.html" target="_blank" title="滋賀県河川防災カメラ" rel="noreferrer" >
-                    <img src={this.state.riverDateTime === undefined ? "" : "/shigapref/pc/cameraData/images/6191FF05/" + this.state.riverDateTime.format('YYYYMMDDHHmm') + ".jpg"} alt="石居橋の現在の様子" width="640" height="480"/>
+                    <img src={this.state.riverDateTime === undefined ? "" : process.env.NEXT_PUBLIC_APP_API_URL + "/shigapref/pc/cameraData/images/6191FF05/" + this.state.riverDateTime.format('YYYYMMDDHHmm') + ".jpg"} alt="石居橋の現在の様子" width="640" height="480"/>
                   </a>
                 </div>
               </div>
