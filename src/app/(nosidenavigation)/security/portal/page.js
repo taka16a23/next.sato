@@ -22,6 +22,8 @@ export default class Page extends Component {
   }
 
   componentDidMount() {
+    // TODO: (a23) [2025/10/04]
+    // サーバー時刻取得API立てるまでフロントで時刻取得
     let serverDateTime = new Date();
     // リンク切れ対策
     // 30秒
