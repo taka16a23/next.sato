@@ -22,27 +22,20 @@ export default class Page extends Component {
   }
 
   componentDidMount() {
-    // サーバー時刻を利用
-    let serverURL = 'https://shiga-bousai.jp/favicon.ico';
-    axios.head(serverURL, { cache: false }).then(res => {
-      console.log(res);
-      console.log(res.headers);
-      console.log(res.headers.date);
-      let serverDateTime = new Date(res.headers.date);
-      // リンク切れ対策
-      // 30秒
-      let fixSeconds = 30000;
-      serverDateTime = new Date(serverDateTime - fixSeconds);
-      // 5分で丸め
-      let minutes = serverDateTime.getMinutes();
-      minutes = Math.floor(minutes / 5) * 5;
-      let fixDateTime = new Date(serverDateTime.getFullYear(),
-                                 serverDateTime.getMonth(), serverDateTime.getDate(),
-                                 serverDateTime.getHours(), minutes);
-      let riverDateTime = moment(fixDateTime);
-      this.setState({
-        riverDateTime: riverDateTime,
-      });
+    let serverDateTime = new Date();
+    // リンク切れ対策
+    // 30秒
+    let fixSeconds = 30000;
+    serverDateTime = new Date(serverDateTime - fixSeconds);
+    // 5分で丸め
+    let minutes = serverDateTime.getMinutes();
+    minutes = Math.floor(minutes / 5) * 5;
+    let fixDateTime = new Date(serverDateTime.getFullYear(),
+                               serverDateTime.getMonth(), serverDateTime.getDate(),
+                               serverDateTime.getHours(), minutes);
+    let riverDateTime = moment(fixDateTime);
+    this.setState({
+      riverDateTime: riverDateTime,
     });
   }
 
