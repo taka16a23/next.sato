@@ -23,7 +23,7 @@ export default class Page extends Component {
 
   componentDidMount() {
     // サーバー時刻を利用
-    let serverURL = process.env.NEXT_PUBLIC_APP_API_URL + AliasRoutes.Favicon;
+    let serverURL = process.env.NEXT_PUBLIC_APP_API_URL + '/admin/';
     axios.get(serverURL).then(res => {
       let serverDateTime = new Date(res.headers.date);
       // リンク切れ対策
