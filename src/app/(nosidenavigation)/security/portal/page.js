@@ -25,6 +25,8 @@ export default class Page extends Component {
     // サーバー時刻を利用
     let serverURL = process.env.NEXT_PUBLIC_APP_API_URL + '/admin/';
     axios.get(serverURL).then(res => {
+      console.log(res.headers);
+      console.log(res.headers['Date']);
       let serverDateTime = new Date(res.headers.date);
       // リンク切れ対策
       // 30秒
@@ -37,8 +39,6 @@ export default class Page extends Component {
                                  serverDateTime.getMonth(), serverDateTime.getDate(),
                                  serverDateTime.getHours(), minutes);
       let riverDateTime = moment(fixDateTime);
-      console.log("DEBUG-1-page.js")
-      console.log(riverDateTime);
       this.setState({
         riverDateTime: riverDateTime,
       });
