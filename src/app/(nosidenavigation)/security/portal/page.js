@@ -23,7 +23,7 @@ export default class Page extends Component {
 
   componentDidMount() {
     // サーバー時刻を利用
-    let serverURL = 'http://c.shiga-bousai.jp/favicon.ico';
+    let serverURL = 'https://shiga-bousai.jp/favicon.ico';
     axios.head(serverURL, { cache: false }).then(res => {
       console.log(res);
       console.log(res.headers);
