@@ -25,6 +25,7 @@ export default class Page extends Component {
     // サーバー時刻を利用
     let serverURL = process.env.NEXT_PUBLIC_APP_API_URL + '/admin/';
     axios.head(serverURL, { cache: false }).then(res => {
+      console.log(res);
       console.log(res.headers);
       console.log(res.headers.date);
       let serverDateTime = new Date(res.headers.date);
