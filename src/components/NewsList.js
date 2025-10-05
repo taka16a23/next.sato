@@ -1,9 +1,9 @@
 "use client"
 import React, { Component } from "react";
 import PropTypes from 'prop-types';
-import Link from 'next/link'
-import moment from 'moment'
-import ContentLoader from "react-content-loader"
+import Link from 'next/link';
+import moment from 'moment';
+import ContentLoader from "react-content-loader";
 
 import { ServiceFactory } from '@/services';
 

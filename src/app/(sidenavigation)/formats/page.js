@@ -1,5 +1,5 @@
-import SatoFormats from '@/components/formats/SatoFormats'
-import OtherFormats from '@/components/formats/OtherFormats'
+import SatoFormats from '@/components/formats/SatoFormats';
+import OtherFormats from '@/components/formats/OtherFormats';
 
 
 export default function Page() {

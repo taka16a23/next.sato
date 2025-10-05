@@ -1,9 +1,9 @@
 "use client"
 import React, { Component } from "react";
-import Link from 'next/link'
+import Link from 'next/link';
 
-import moment from 'moment'
-import ContentLoader from "react-content-loader"
+import moment from 'moment';
+import ContentLoader from "react-content-loader";
 
 import AliasRoutes from "@/routes/AliasRoutes";
 import { ServiceFactory } from '@/services';

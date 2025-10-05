@@ -1,4 +1,4 @@
-import Link from 'next/link'
+import Link from 'next/link';
 
 import AliasRoutes from "@/routes/AliasRoutes";
 import NewsNavigation from '@/components/navigations/NewsNavigation';

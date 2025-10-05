@@ -1,6 +1,6 @@
 "use client"
 import React, { Component } from "react";
-import Link from 'next/link'
+import Link from 'next/link';
 import AliasRoutes from "@/routes/AliasRoutes";
 
 

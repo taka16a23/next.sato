@@ -3,12 +3,12 @@ import React, { Component } from "react";
 
 import axios from "axios";
 import moment from "moment";
-import { Timeline } from 'react-twitter-widgets'
-import ContentLoader from "react-content-loader"
+import { Timeline } from 'react-twitter-widgets';
+import ContentLoader from "react-content-loader";
 
 import AliasRoutes from "@/routes/AliasRoutes";
-import Emergency from '@/components/Emergency'
-import WeatherAlert from '@/components/WeatherAlert'
+import Emergency from '@/components/Emergency';
+import WeatherAlert from '@/components/WeatherAlert';
 
 
 export default class Page extends Component {

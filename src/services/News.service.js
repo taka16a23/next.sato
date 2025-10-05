@@ -1,6 +1,6 @@
 import { RepositoryFactory } from '@/repositories';
 
-import moment from 'moment'
+import moment from 'moment';
 
 
 export default class NewsService extends Object {

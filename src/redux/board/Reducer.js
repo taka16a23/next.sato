@@ -3,7 +3,7 @@ import {
   BOARD_MODELS,
 } from "../constants/";
 
-import moment from 'moment'
+import moment from 'moment';
 
 
 const INIT_STATE = {

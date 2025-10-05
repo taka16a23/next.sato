@@ -1,7 +1,7 @@
 // import "@/assets/scss/global.css";
 import "@/assets/scss/style.min.css";
-import Link from 'next/link'
-import Image from 'next/image'
+import Link from 'next/link';
+import Image from 'next/image';
 
 import { ReduxProvider } from '@/redux/ReduxProvider';
 

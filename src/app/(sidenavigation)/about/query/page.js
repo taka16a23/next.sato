@@ -3,7 +3,7 @@ import React, { Component } from "react";
 
 import { connect } from 'react-redux';
 
-import FQA from '@/components/FQA'
+import FQA from '@/components/FQA';
 import { QueryModel } from "@/models";
 import {
   openQueryConfirmModal,

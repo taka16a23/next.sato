@@ -1,6 +1,6 @@
 'use client'
 
-import { slide as BurgerMenu } from 'react-burger-menu'
+import { slide as BurgerMenu } from 'react-burger-menu';
 import { Provider } from "react-redux";
 
 import NewsNavigation from '@/components/navigations/NewsNavigation';
