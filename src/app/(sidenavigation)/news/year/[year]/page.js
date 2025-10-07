@@ -16,7 +16,7 @@ export default class Page extends Component {
         <main id="main">
           <section className="main-item">
             <h2 className="main-title">
-              <span className="title">{this.props.params.year ? this.props.params.year + "年 お知らせ一覧" : ''}</span>
+              <span className="title">{this.props.params.year ? this.props.params.year + "年 お知らせ一覧" : '    年 お知らせ一覧'}</span>
             </h2>
             <div className="main-body news">
               <NewsList year={this.props.params.year} limit={this.props.limit}/>

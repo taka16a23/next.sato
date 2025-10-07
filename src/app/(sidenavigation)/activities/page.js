@@ -66,7 +66,7 @@ export default class Page extends Component {
           <main id="main">
             <section className="main-item faq-wrapper">
               <h2 className="main-title faq-title">
-                <span className="title">{this.state.year + '年 '} 活動報告</span>
+                <span className="title">{this.state.year ? this.state.year + '年 ' : '    年'} 活動報告</span>
               </h2>
               <ul className="tile-list">
                 {this.getSkeltons()}
@@ -82,7 +82,7 @@ export default class Page extends Component {
           <main id="main">
             <section className="main-item faq-wrapper">
               <h2 className="main-title faq-title">
-                <span className="title">{this.state.year + '年 '} 活動報告</span>
+                <span className="title">{this.state.year ? this.state.year + '年 ' : '    年'} 活動報告</span>
               </h2>
               <div style={{textAlign: "center"}}>記事が存在しません</div>
             </section>
@@ -95,7 +95,7 @@ export default class Page extends Component {
         <main id="main">
           <section className="main-item faq-wrapper">
             <h2 className="main-title faq-title">
-              <span className="title">{this.state.year + '年 '} 活動報告</span>
+              <span className="title">{this.state.year ? this.state.year + '年 ' : '    年'} 活動報告</span>
             </h2>
             <ul className="tile-list">
               {this.models.map((oModel) =>

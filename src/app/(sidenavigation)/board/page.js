@@ -42,7 +42,7 @@ export default class Page extends Component {
           <main id="main">
             <div className="main-item board">
               <h2 className="main-title">
-                <span className="title">{this.props.year ? this.props.year + '年 ' : ''}回覧板</span>
+                <span className="title">{this.props.year ? this.props.year + '年 ' : '    年'}回覧板</span>
               </h2>
               <div className="main-body">
                 <div className="board-container">
@@ -231,7 +231,7 @@ export default class Page extends Component {
           <main id="main">
             <div className={1 <= this.state.modelLength ? "main-item board" : "main-item"}>
               <h2 className="main-title">
-                <span className="title">{this.props.year ? this.props.year + '年 ' : ''}回覧板</span>
+                <span className="title">{this.props.year ? this.props.year + '年 ' : '    年'}回覧板</span>
               </h2>
               <div className="main-body">
                 <div className="board-container">
@@ -252,7 +252,7 @@ export default class Page extends Component {
         <main id="main">
           <div className={1 <= this.state.modelLength ? "main-item board" : "main-item"}>
             <h2 className="main-title">
-              <span className="title">{this.props.year ? this.props.year + '年 ' : ''}回覧板</span>
+              <span className="title">{this.props.year ? this.props.year + '年 ' : '    年'}回覧板</span>
             </h2>
             <div className="main-body">
               <div className="board-container">
