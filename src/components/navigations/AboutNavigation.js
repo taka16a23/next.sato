@@ -30,17 +30,17 @@ export default class AboutNavigation extends Component {
             </Link>
           </li>
           <li className="memu-item">
-            <Link className="menu-label" href={AliasRoutes.AboutHall} as={AliasRoutes.AboutRule} alt="里公民館" title="里公民館を見る">
+            <Link className="menu-label" href={AliasRoutes.AboutHall} as={AliasRoutes.AboutHall} alt="里公民館" title="里公民館を見る">
               里公民館
             </Link>
           </li>
           <li className="memu-item">
-            <Link className="menu-label" href={AliasRoutes.AboutGroup} as={AliasRoutes.AboutRule} alt="ブロックと組" title="ブロックと組を見る">
+            <Link className="menu-label" href={AliasRoutes.AboutGroup} as={AliasRoutes.AboutGroup} alt="ブロックと組" title="ブロックと組を見る">
               ブロックと組
             </Link>
           </li>
           <li className="memu-item">
-            <Link className="menu-label" href={AliasRoutes.AboutQuery} as={AliasRoutes.AboutRule} alt="情報提供・問い合わせ" title="情報提供・問い合わせを見る">
+            <Link className="menu-label" href={AliasRoutes.AboutQuery} as={AliasRoutes.AboutQuery} alt="情報提供・問い合わせ" title="情報提供・問い合わせを見る">
               情報提供・問い合わせ
             </Link>
           </li>
