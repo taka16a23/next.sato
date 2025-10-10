@@ -61,31 +61,6 @@ export default class Page extends Component {
                   <div className="emergency-item emergencyInfoWrapper">
                     <Emergency/>
                   </div>
-                  <div className="emergency-item security-timeline">
-                    <ContentLoader
-                       speed={2}
-                       width="100%"
-                       height={400}
-                       backgroundColor="#f3f3f3"
-                       foregroundColor="#ecebeb"
-                       style={{display: this.state.isLoadedTimeline !== true ? "block" : "none"}}
-                    >
-                      <rect x="0" y="0" rx="0" ry="0" width="100%" height="400"/>
-                    </ContentLoader>
-                    <Timeline
-                      style={{display: this.state.isLoadedTimeline !== true ? "none" : "block"}}
-                      dataSource={{
-                        sourceType: 'profile',
-                        screenName: 'otsu_kikibousai'
-                      }}
-                      options={{
-                        lang: "ja",
-                        height: '400'
-                      }}
-                      onLoad={this.onLoadTimeline.bind(this)}
-                    />
-                    <div>※表示にはX(twitter)のログインが必要です</div>
-                  </div>
                 </div>
               </div>
             </div>
